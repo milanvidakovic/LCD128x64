@@ -1,0 +1,21 @@
+LCD driver chip is ST7565R, which has Arduino libraries. 
+Connection is through CS, RSE, RS, SCL, SI, VDD, GND. 
+The white backlight LEDs connect to A (+3.3V) and K (ground), draw about 80mA at 3.3V. 
+The four IC_xx pins connect to a 20L16S1Y, a character ROM for Chinese characters and can be left unconnected. 
+
+library u8g2 / U8G2_ST7565_ERC12864_F_4W_HW_SPI and set contrast to 20
+
+U8G2_ST7565_64128N_1_4W_HW_SPI and U8X8_ST7565_64128N_4W_HW_SPI. 
+For contrast setting use 191 (setContrast(191)). 
+
+1	CS	Chip Select		D5 (plava)
+2	RSE	Reset			D19 (braon)
+3	RS (DC)	Data/Command pin	D21 (bela)
+4	SCL	SPI Clock		D18 (zelena)
+5	SI	SPI MOSI		D23 (žuta)
+6	VDD	3.3V
+7	VSS	GND
+8	A	Anode 3.3V
+9	K	Katode	GND
+
+
